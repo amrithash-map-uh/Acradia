@@ -185,7 +185,7 @@ flowchart TD
 ```
 
 The exact assignment and status-update process will depend on the NGO
-
+features implemented in the MVP.
 
 ## System Architecture
 
@@ -305,9 +305,24 @@ request progress updates.
 
 ------------------------------------------------------------------------
 
+## Getting Started
+
+**Requirements:** Python 3.10+
+
+``` bash
+pip install -r requirements.txt
+uvicorn backend.app.main:app --reload
+```
+
+Open **http://127.0.0.1:8000** in your browser (API docs: **http://127.0.0.1:8000/docs**).
+
+*Works out of the box with local SQLite—no database setup or API key required.*
+
+------------------------------------------------------------------------
+
 ## Project Structure
 
-A  structure for the MVP:
+A suggested structure for the MVP:
 
 ``` text
 sahaay/
@@ -343,7 +358,8 @@ sahaay/
 └── README.md
 ```
 
-
+This is a proposed organization, not a claim that every file or module
+already exists.
 
 ------------------------------------------------------------------------
 
@@ -373,6 +389,36 @@ public sources.
 
 ------------------------------------------------------------------------
 
+## Roadmap
+
+-   [ ] Build the initial web interface and profile form
+-   [ ] Add a curated scheme dataset
+-   [ ] Implement rule-based eligibility matching
+-   [ ] Display matched schemes and eligibility explanations
+-   [ ] Add RAG-based question answering over scheme information
+-   [ ] Add text-to-speech for scheme explanations
+-   [ ] Implement NGO registration and help-request submission
+-   [ ] Add location-aware NGO discovery
+-   [ ] Add request status updates and user feedback
+-   [ ] Expand verified scheme and language coverage
+
+------------------------------------------------------------------------
+
+## Contributing
+
+Contributions, suggestions, and issue reports are welcome.
+
+1.  Fork the repository.
+2.  Create a feature branch: `git checkout -b feature/your-feature`
+3.  Commit your changes: `git commit -m "Add your feature"`
+4.  Push the branch: `git push origin feature/your-feature`
+5.  Open a pull request describing the change.
+
+For major changes, open an issue first so the proposed approach can be
+discussed.
+
+------------------------------------------------------------------------
+
 ## Project Status
 
 SAHAAY is being developed as an MVP. The initial goal is to validate the
@@ -380,4 +426,8 @@ core workflow---profile intake, scheme matching, understandable scheme
 information, AI assistance, and an NGO help request---before expanding
 data coverage and integrations.
 
+## License
 
+Choose and add a license before publishing the repository for public
+reuse. If you intend to make the project open source, a license such as
+MIT may be suitable; confirm that it matches your team's requirements.
