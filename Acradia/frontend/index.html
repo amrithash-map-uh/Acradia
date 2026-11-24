@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAHAAY — Government Scheme Assistant</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1>SAHAAY</h1>
+        <p class="subtitle">AI-Powered Government Welfare Scheme Discovery &amp; NGO Assistance</p>
+      </div>
+      <div class="voice-controls">
+        <button id="stop-voice-btn" type="button" class="btn btn-secondary btn-sm" hidden>Stop Voice</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <!-- 1. Citizen Profile & Eligibility -->
+    <section class="card" aria-labelledby="profile-heading">
+      <h2 id="profile-heading">1. Your Profile</h2>
+      <p class="muted">Enter basic details to find relevant welfare schemes. Only required discovery fields are collected.</p>
+
+      <form id="profile-form" class="form-grid">
+        <div class="form-field">
+          <label for="name">Name (optional)</label>
+          <input id="name" name="name" type="text" placeholder="e.g. Asha Devi" />
+        </div>
+
+        <div class="form-field">
+          <label for="age">Age (years) *</label>
+          <input id="age" name="age" type="number" min="0" max="120" required value="28" />
+        </div>
+
+        <div class="form-field">
+          <label for="income">Annual Household Income (INR) *</label>
+          <input id="income" name="income" type="number" min="0" step="1000" required value="180000" />
+        </div>
+
+        <div class="form-field">
+          <label for="location">Location (State or City) *</label>
+          <input id="location" name="location" type="text" required placeholder="e.g. Maharashtra, Delhi, Uttar Pradesh" value="Maharashtra" />
+        </div>
+
+        <div class="form-field">
+          <label for="occupation">Occupation *</label>
+          <input id="occupation" name="occupation" list="occupation-options" required value="farmer" placeholder="e.g. farmer, student, street vendor" />
+          <datalist id="occupation-options">
+            <option value="farmer"></option>
+            <option value="student"></option>
+            <option value="street vendor"></option>
+            <option value="self-employed"></option>
+            <option value="daily wage"></option>
+            <option value="artisan"></option>
+            <option value="small business"></option>
+            <option value="unemployed"></option>
+          </datalist>
+        </div>
+
+        <div class="form-field">
+          <label for="preferred_language">Preferred Language *</label>
+          <select id="preferred_language" name="preferred_language">
+            <option value="en">English (en-IN)</option>
+            <option value="hi">Hindi (hi-IN)</option>
+            <option value="mr">Marathi (mr-IN)</option>
+            <option value="ta">Tamil (ta-IN)</option>
+            <option value="te">Telugu (te-IN)</option>
+            <option value="bn">Bengali (bn-IN)</option>
+            <option value="kn">Kannada (kn-IN)</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Find Matching Schemes</button>
+          <button id="browse-all-btn" type="button" class="btn btn-secondary">Browse All Schemes</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- 2. Scheme Results -->
+    <section class="card" aria-labelledby="results-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="results-heading">2. Matched Schemes</h2>
+          <p id="results-summary" class="muted">Submit your profile or browse all curated schemes.</p>
+        </div>
+      </div>
+
+      <div id="eligibility-disclaimer" class="notice" hidden></div>
+      <div id="schemes-list" class="schemes-list"></div>
+    </section>
+
+    <!-- 3. AI Assistant (RAG) -->
+    <section class="card" aria-labelledby="assistant-heading">
+      <h2 id="assistant-heading">3. Ask SAHAAY AI Assistant</h2>
+      <p class="muted">Ask questions about benefits, eligibility rules, or how to apply. Answers are grounded in the curated scheme dataset.</p>
+
+      <form id="assistant-form" class="stack">
+        <div class="form-field">
+          <label for="assistant-scheme">Focus Scheme (optional)</label>
+          <select id="assistant-scheme" name="scheme_slug">
+            <option value="">All Schemes (auto-retrieve)</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="assistant-question">Your Question *</label>
+          <textarea id="assistant-question" name="question" rows="3" required placeholder="e.g. How do I apply for PM-KISAN and what documents are needed?"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Ask Assistant</button>
+        </div>
+      </form>
+
+      <div id="assistant-response" class="assistant-output" hidden>
+        <div class="assistant-meta">
+          <span id="assistant-mode" class="badge"></span>
+          <button id="speak-answer-btn" type="button" class="btn btn-secondary btn-sm">Listen</button>
+        </div>
+        <div id="assistant-answer" class="answer-text"></div>
+        <div id="assistant-citations" class="citations"></div>
+        <p id="assistant-disclaimer" class="disclaimer-text"></p>
+      </div>
+    </section>
+
+    <!-- 4. NGO Help Request & Routing -->
+    <section class="card" aria-labelledby="ngo-heading">
+      <h2 id="ngo-heading">4. Request NGO Assistance</h2>
+      <p class="muted">Need human help with documents or applications? Submit a request to route to an available NGO in your region.</p>
+
+      <form id="ngo-form" class="form-grid">
+        <div class="form-field">
+          <label for="ngo-citizen-name">Your Name *</label>
+          <input id="ngo-citizen-name" type="text" required placeholder="Full name" />
+        </div>
+
+        <div class="form-field">
+          <label for="ngo-contact">Phone or Email *</label>
+          <input id="ngo-contact" type="text" required placeholder="e.g. +91-98XXXXXXXX or email" />
+        </div>
+
+        <div class="form-field">
+          <label for="ngo-location">Your State / City *</label>
+          <input id="ngo-location" type="text" required placeholder="e.g. Maharashtra" value="Maharashtra" />
+        </div>
+
+        <div class="form-field">
+          <label for="ngo-scheme">Related Scheme (optional)</label>
+          <select id="ngo-scheme">
+            <option value="">General Guidance</option>
+          </select>
+        </div>
+
+        <div class="form-field form-full">
+          <label for="ngo-message">How can an NGO help you? *</label>
+          <textarea id="ngo-message" rows="3" required placeholder="Describe what assistance you need (e.g., document verification, online form submission)"></textarea>
+        </div>
+
+        <div class="form-field form-full consent-row">
+          <label class="checkbox-label">
+            <input id="ngo-consent" type="checkbox" required />
+            <span>I give my explicit consent to share my contact details and request information with an assigned NGO for assistance.</span>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit Help Request</button>
+        </div>
+      </form>
+
+      <div id="ngo-feedback" class="notice" hidden></div>
+
+      <div class="subsection">
+        <h3>Submitted Help Requests</h3>
+        <div id="ngo-requests-list" class="requests-list"></div>
+      </div>
+
+      <div class="subsection">
+        <h3>Registered Partner NGOs</h3>
+        <div id="ngo-directory" class="ngo-directory"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>SAHAAY MVP — Informational guidance based on reviewed public scheme sources. Not an official government portal or decision.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

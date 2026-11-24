@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Jan Sahyog Seva Kendra",
+    "location": "Maharashtra",
+    "city": "Mumbai",
+    "contact_email": "help@jansahyog.org.in",
+    "focus_areas": "Healthcare, Housing, Women Welfare, Document Assistance",
+    "is_available": true
+  },
+  {
+    "name": "Gramin Kalyan Foundation",
+    "location": "Uttar Pradesh",
+    "city": "Lucknow",
+    "contact_email": "support@graminkalyan.org.in",
+    "focus_areas": "Agriculture, Farmer Schemes, Pension Enrollment",
+    "is_available": true
+  },
+  {
+    "name": "Nagarik Mitra Trust",
+    "location": "Delhi",
+    "city": "New Delhi",
+    "contact_email": "care@nagarikmitra.org.in",
+    "focus_areas": "Street Vendors, Livelihood Loans, Education Scholarships",
+    "is_available": true
+  },
+  {
+    "name": "Dakshina Citizen Support Network",
+    "location": "Karnataka",
+    "city": "Bengaluru",
+    "contact_email": "connect@dakshinacitizen.org.in",
+    "focus_areas": "Education, Micro-Enterprise, Health Insurance",
+    "is_available": true
+  },
+  {
+    "name": "Sahaay National Citizen Desk",
+    "location": "All India",
+    "city": "National",
+    "contact_email": "desk@sahaay-help.org.in",
+    "focus_areas": "General Scheme Guidance and Application Support",
+    "is_available": true
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "pm-kisan",
+    "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+    "category": "Agriculture",
+    "description": "Central sector income support scheme providing direct financial assistance to landholding farmer families across India.",
+    "benefits": "Rs. 6,000 per year in three equal installments of Rs. 2,000 transferred directly to the beneficiary's bank account.",
+    "eligibility_rules": {
+      "min_age": 18,
+      "max_age": null,
+      "max_income": null,
+      "occupations": ["farmer", "agriculture"],
+      "locations": ["all"],
+      "conditions": [
+        "Applicant must belong to a landholding farmer family with cultivable land.",
+        "Institutional landholders and higher-income tax-paying categories are excluded per scheme guidelines."
+      ]
+    },
+    "application_guidance": "Apply online via the PM-KISAN portal (pmkisan.gov.in) using Aadhaar, bank account details, and land ownership records, or visit a nearby Common Service Centre (CSC).",
+    "source_url": "https://pmkisan.gov.in/",
+    "last_reviewed": "2026-10-01"
+  },
+  {
+    "slug": "pm-jay",
+    "name": "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)",
+    "category": "Healthcare",
+    "description": "Public health assurance scheme offering cashless secondary and tertiary hospitalization coverage to vulnerable families.",
+    "benefits": "Health insurance cover of up to Rs. 5,00,000 per family per year for hospitalization at empaneled public and private hospitals.",
+    "eligibility_rules": {
+      "min_age": null,
+      "max_age": null,
+      "max_income": 250000,
+      "occupations": ["all"],
+      "locations": ["all"],
+      "conditions": [
+        "Intended for economically weaker and SECC-listed rural/urban vulnerable households.",
+        "Covers pre-existing conditions from day one; senior citizens aged 70+ are also covered under expanded guidelines."
+      ]
+    },
+    "application_guidance": "Check eligibility on beneficiary.nha.gov.in or at an Ayushman Arogya Mandir / empaneled hospital with Aadhaar and ration card to generate an Ayushman Card.",
+    "source_url": "https://pmjay.gov.in/",
+    "last_reviewed": "2026-10-01"
+  },
+  {
+    "slug": "pm-awas-gramin-urban",
+    "name": "Pradhan Mantri Awas Yojana (PMAY)",
+    "category": "Housing",
+    "description": "Housing assistance program helping eligible low-income and middle-income families build or acquire a pucca house.",
+    "benefits": "Financial assistance or interest subsidy for constructing or purchasing an all-weather house with basic amenities.",
+    "eligibility_rules": {
+      "min_age": 18,
+      "max_age": null,
+      "max_income": 600000,
+      "occupations": ["all"],
+      "locations": ["all"],
+      "conditions": [
+        "Applicant or family must not already own a pucca house anywhere in India.",
+        "Annual household income should fall within EWS (up to Rs. 3 lakh) or LIG (up to Rs. 6 lakh) brackets for primary subsidy categories."
+      ]
+    },
+    "application_guidance": "Apply through pmaymis.gov.in (Urban) or local Gram Panchayat / CSC (Gramin) with Aadhaar, income proof, and bank account details.",
+    "source_url": "https://pmaymis.gov.in/",
+    "last_reviewed": "2026-10-01"
+  },
+  {
+    "slug": "nsp-post-matric",
+    "name": "Post-Matric Scholarship Scheme (National Scholarship Portal)",
+    "category": "Education",
+    "description": "Financial support for students from economically weaker and reserved categories pursuing post-secondary education.",
+    "benefits": "Covers tuition/compulsory fees and monthly maintenance allowance depending on course level and hosteller/day-scholar status.",
+    "eligibility_rules": {
+      "min_age": 15,
+      "max_age": 30,
+      "max_income": 250000,
+      "occupations": ["student"],
+      "locations": ["all"],
+      "conditions": [
+        "Must be enrolled in Class 11, Class 12, diploma, undergraduate, or postgraduate studies at a recognized institution.",
+        "Family annual income typically must not exceed Rs. 2,50,000 (varies slightly by category scheme)."
+      ]
+    },
+    "application_guidance": "Register on scholarships.gov.in (NSP), complete One-Time Registration (OTR), and upload income certificate, previous marksheet, and bonafide student certificate.",
+    "source_url": "https://scholarships.gov.in/",
+    "last_reviewed": "2026-10-01"
+  },
+  {
+    "slug": "pm-svanidhi",
+    "name": "PM Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi)",
+    "category": "Livelihood",
+    "description": "Micro-credit facility empowering urban street vendors with affordable collateral-free working capital loans.",
+    "benefits": "Collateral-free working capital loans starting at Rs. 10,000 (up to Rs. 50,000 in subsequent tranches) with 7% interest subsidy and digital cashback.",
+    "eligibility_rules": {
+      "min_age": 18,
+      "max_age": null,
+      "max_income": 300000,
+      "occupations": ["street vendor", "vendor", "self-employed", "small business"],
+      "locations": ["all"],
+      "conditions": [
+        "Applicant must be a street vendor engaged in vending in urban areas.",
+        "Requires Certificate of Vending or Letter of Recommendation from Urban Local Body (ULB) / Town Vending Committee."
+      ]
+    },
+    "application_guidance": "Apply online via pmsvanidhi.mohua.gov.in or through a nearby CSC/lending bank with Aadhaar, mobile number, and vending certificate.",
+    "source_url": "https://pmsvanidhi.mohua.gov.in/",
+    "last_reviewed": "2026-10-01"
+  },
+  {
+    "slug": "atal-pension-yojana",
+    "name": "Atal Pension Yojana (APY)",
+    "category": "Social Security",
+    "description": "Guaranteed pension scheme focused on unorganized sector workers to provide regular monthly income after age 60.",
+    "benefits": "Guaranteed minimum monthly pension of Rs. 1,000 to Rs. 5,000 starting at age 60 depending on contribution amount.",
+    "eligibility_rules": {
+      "min_age": 18,
+      "max_age": 40,
+      "max_income": 500000,
+      "occupations": ["daily wage", "worker", "self-employed", "farmer", "street vendor", "unemployed", "all"],
+      "locations": ["all"],
+      "conditions": [
+        "Subscriber must be aged between 18 and 40 years with a savings bank or post office account.",
+        "Income taxpayers are not eligible to open new APY accounts."
+      ]
+    },
+    "application_guidance": "Visit your bank branch or use your bank's net banking / mobile app to submit the APY registration form with Aadhaar and nominee details.",
+    "source_url": "https://www.npscra.nsdl.co.in/scheme-details.php",
+    "last_reviewed": "2026-10-01"
+  },
+  {
+    "slug": "pm-mudra-yojana",
+    "name": "Pradhan Mantri MUDRA Yojana (PMMY)",
+    "category": "Entrepreneurship",
+    "description": "Provides collateral-free institutional credit to non-corporate, non-farm small and micro enterprises.",
+    "benefits": "Business loans under Shishu (up to Rs. 50,000), Kishore (up to Rs. 5 lakh), and Tarun (up to Rs. 10 lakh) categories.",
+    "eligibility_rules": {
+      "min_age": 18,
+      "max_age": 65,
+      "max_income": null,
+      "occupations": ["self-employed", "small business", "artisan", "street vendor", "entrepreneur"],
+      "locations": ["all"],
+      "conditions": [
+        "Must have a viable non-farm income-generating business plan in manufacturing, trading, or services.",
+        "Applicant should not have any past loan default with banks or financial institutions."
+      ]
+    },
+    "application_guidance": "Apply through JanSamarth portal (jansamarth.in) or directly at public/private sector banks, RRBs, or MFIs with ID proof, address proof, and business plan.",
+    "source_url": "https://www.mudra.org.in/",
+    "last_reviewed": "2026-10-01"
+  },
+  {
+    "slug": "maharashtra-ladki-bahin",
+    "name": "Mukhyamantri Majhi Ladki Bahin Yojana (Maharashtra)",
+    "category": "Women Welfare",
+    "description": "State welfare initiative in Maharashtra providing monthly financial assistance to eligible women for health, nutrition, and economic independence.",
+    "benefits": "Direct benefit transfer of Rs. 1,500 per month into the beneficiary woman's Aadhaar-linked bank account.",
+    "eligibility_rules": {
+      "min_age": 21,
+      "max_age": 65,
+      "max_income": 250000,
+      "occupations": ["all"],
+      "locations": ["maharashtra", "mumbai", "pune", "nagpur", "nashik", "thane"],
+      "conditions": [
+        "Resident of Maharashtra aged 21 to 65 years.",
+        "Annual family income must not exceed Rs. 2,50,000 and family should not be income tax payers."
+      ]
+    },
+    "application_guidance": "Apply via the Nari Shakti Doot app, official Maharashtra state portal, or Anganwadi / Setu Kendra with Aadhaar, domicile/ration card, and income certificate.",
+    "source_url": "https://ladakibahin.maharashtra.gov.in/",
+    "last_reviewed": "2026-10-01"
+  }
+]
